@@ -121,8 +121,7 @@ def main():
                     st.error(f"Processing error: {result['error']}")
                 else:
                     st.success("Document processed successfully")
-                    st.json(result)
-                    display_dataframes(result['body'])  # Display different sections as dataframes
+                    display_dataframes(result['body'])
 
         else:
             st.error("Please enter a valid S3 URI.")
